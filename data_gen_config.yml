@@ -1,0 +1,16 @@
+train:
+  dev_directory: ./dev_data
+  feature:
+      frames: 5
+      hop_length: 512
+      n_fft: 1024
+      n_mels: 128
+      power: 2.0
+      downsample: True
+  model:
+    input_dim: 128
+convert:
+  x_npy_plot_roc: ./test_data/anomaly_detection/128input_test_data.npy
+  y_npy_plot_roc: ./test_data/anomaly_detection/128input_test_data_ground_truths.npy
+  x_npy_hls_test_bench: ./test_data/anomaly_detection/test_bench//128input_test_data.npy
+  y_npy_hls_test_bench: ./test_data/anomaly_detection/test_bench//128input_test_data_ground_truths.npy

@@ -1,0 +1,21 @@
+name: qdense_batchnorm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - jupyter
+  - nb_conda
+  - ipykernel
+  - pip
+  - pip:
+    - matplotlib
+    - numpy
+    - PyYAML
+    - scikit-learn
+    - tensorflow
+    - tqdm
+    - librosa
+    - pandas
+    - setGPU
+    - git+https://github.com/julesmuhizi/qkeras.git@qdense_batchnorm
+    # - git+https://github.com/kentaroy47/keras-Opcounter
