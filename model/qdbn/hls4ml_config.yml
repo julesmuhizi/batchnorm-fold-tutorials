@@ -1,41 +1,41 @@
 HLSConfig:
   LayerName:
-    input_2:
+    input_1:
       Precision: ap_fixed<8,8>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_activation_5:
+    q_activation:
       Precision:
         result: ap_ufixed<7,1>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_activation_6:
+    q_activation_1:
       Precision:
         result: ap_ufixed<7,1>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_activation_7:
+    q_activation_2:
       Precision:
         result: ap_ufixed<7,1>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_activation_8:
+    q_activation_3:
       Precision:
         result: ap_ufixed<7,1>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_activation_9:
+    q_activation_4:
       Precision:
         result: ap_ufixed<7,1>
       ReuseFactor: 16384
       Trace: true
       accum_t: ap_fixed<32,16>
-    q_dense_6:
+    q_dense:
       Precision:
         bias: ap_fixed<13,1>
         weight: ap_fixed<13,1>
