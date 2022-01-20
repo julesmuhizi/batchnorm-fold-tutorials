@@ -5,4 +5,7 @@ To create the environment:
 
 ``` conda env create -f environment.yml ```
 
-Run the jupyter notebook
+download the dataset:
+```./get_dataset.sh```
+
+Run the jupyter notebook, it's all self contained
