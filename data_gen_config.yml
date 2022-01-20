@@ -1,5 +1,5 @@
 train:
-  dev_directory: ./dev_data
+  dev_directory: ../AnomalyDetection/dev_data
   feature:
       frames: 5
       hop_length: 512

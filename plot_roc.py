@@ -29,7 +29,10 @@ def plot_roc(ref_model, hls_model, X_npy, y_npy, output_dir=None, data_split_fac
 
     fig, ax = plt.subplots(figsize=(9, 9))
     #perform inference
-    for index, X_data in enumerate(tqdm(X)):
+    # with tqdm(total=total, position=0, leave=True) as pbar:
+    #     for i in tqdm((foo_, range_ ), position=0, leave=True):
+    #     pbar.update()
+    for index, X_data in enumerate(tqdm(X)): # position=0, leave=True))
         ref_pred = [0. for ind in X_data]
         QDenseBN_pred = [0. for ind in X_data]
         for file_idx, X_test in enumerate(tqdm(X_data)):
@@ -40,6 +43,7 @@ def plot_roc(ref_model, hls_model, X_npy, y_npy, output_dir=None, data_split_fac
             QDenseBN_predictions = hls_model.predict(X_test)
             QDenseBN_errors = np.mean(np.square(X_test-QDenseBN_predictions), axis=1)
             QDenseBN_pred[file_idx] = np.mean(QDenseBN_errors)
+            # tqdm._instances.clear()
             
         #generate auc and roc metrics
         y_test = y[index]
@@ -58,6 +62,7 @@ def plot_roc(ref_model, hls_model, X_npy, y_npy, output_dir=None, data_split_fac
         plt.ylim([0, 1])
         plt.ylabel('True Positive Rate')
         plt.xlabel('False Positive Rate')
+
     plt.show()
     if output_dir != None:
         plt.savefig('{}/qdense_vs_qdensebatchnorm_roc_curve'.format(output_dir))
