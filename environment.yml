@@ -18,9 +18,4 @@ dependencies:
     - pandas
     - setGPU
     - git+https://github.com/julesmuhizi/qkeras.git@qdense_batchnorm
-<<<<<<< HEAD
     - git+https://github.com/hls4ml-finn-mlperftiny/hls4ml.git@qdense_batchnorm#egg=hls4ml[profiling]
-=======
-    - git+https://github.com/hls4ml-finn-mlperftiny/hls4ml.git@qdense_batchnorm#egg=hls4ml[profiling]
-    # - git+https://github.com/kentaroy47/keras-Opcounter
->>>>>>> 0789d734e9265e9eeeb81c71d71bd7284bf30993
