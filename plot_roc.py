@@ -1,10 +1,11 @@
-from sklearn.metrics import accuracy_score
 from sklearn import metrics
 from sklearn.utils import shuffle
+import matplotlib
+# matplotlib.use('PyQt5')
+# matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
-# import plotting
 import numpy as np
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 
 def plot_roc(ref_model, hls_model, X_npy, y_npy, output_dir=None, data_split_factor=1):
     '''
@@ -24,7 +25,7 @@ def plot_roc(ref_model, hls_model, X_npy, y_npy, output_dir=None, data_split_fac
         assert len(X) == len(y)
         X[i], y[i] = shuffle(X[i], y[i])
         X[i], y[i] = X[i][0:divider],  y[i][0:divider]
-    print("using one quarter of provided dataset for roc plot")
+    print("using 1/{} of provided dataset for roc plot".format(data_split_factor))
 
     fig, ax = plt.subplots(figsize=(9, 9))
     #perform inference
